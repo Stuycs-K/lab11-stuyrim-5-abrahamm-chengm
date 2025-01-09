@@ -18,9 +18,9 @@ Make a clear list of features that work/dont work
 
 ## Adventurer Subclasses
 
-### Quarterback
+### <ins>Quarterback</ins>
 
-### Running Back
+### <ins>Running Back</ins>
 
-### Defensive Line
+### <ins>Defensive Line</ins>
 
