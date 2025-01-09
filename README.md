@@ -27,12 +27,12 @@ Make a clear list of features that work/dont work
 ### <ins>Running Back</ins>
 - HP: **80 HP**
 - Attack: **Rush**: Deals 5 to 10 damage to enemy and increases self speed by 10
-- Support: **Lateral**: ***give self 10% damage increase if below 40 HP***, ***otherwise only <ins>5%</ins> damage increase*** ; ***Need 25 speed to use*** ; If used remove 25 Speed
+- Support: **Lateral**: ***give self 10% damage increase if below 40 HP***, ***otherwise only <ins>5%</ins> damage increase*** ; ***Need 25 speed to use*** ; If used remove 25 Speed from self
 - Special Attack: **Truck** ***(Requires 25 Speed)***: Deals 15 damage but self lose 25 Speed; **<ins>Permanent Stat Buff of 20% Reduction of Damage Recieved </ins>**
 - Special Resource: <ins>Speed</ins>
 ### <ins>Defensive Line</ins>
 - HP: **100 HP**
 - Attack: **Tackle**: Deals 10 damage to enemy and increases self strength by 10;
-- Support: **Sideline Rest**: Self converts <ins>half</ins> of strength to HP, adds that number to the HP and then reset self strength to **zero**
+- Support: **Sideline Rest**: Self converts <ins>half</ins> of current strength to HP, adds that number to the HP and then reset self strength to **zero**
 - Special Attack:  **Sack** ***(Requires 25 Strength)***: Deals 30 Damage but self loses 25 Strength
-- Special Resource:<ins>Strength</ins>
+- Special Resource: <ins>Strength</ins>
