@@ -22,7 +22,7 @@ Make a clear list of features that work/dont work
 - HP: **60 HP**
 - Attack: **Pass**: Deals 10 to 15 damage to enemy and also increases self Arm Power by 5
 - Support: **Take a Knee**: ***lose 10 Arm Power*** but heals self for 10 HP
-- Special Attack: **Hail Mary** ***(Requires 20 Arm Power)***: Deals 30 damage to enemy but loses 20 Arm Power
+- Special Attack: **Hail Mary** ***(Requires 20 Arm Power)***: Deals 30 damage to enemy but self loses 20 Arm Power
 - Special Resource: <ins>Arm Power</ins>
 ### <ins>Running Back</ins>
 - HP: **80 HP**
