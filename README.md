@@ -19,14 +19,20 @@ Make a clear list of features that work/dont work
 ## Adventurer Subclasses
 
 ### <ins>Quarterback</ins>
--Attack
--Support
--Special Attack
+- HP: **60 HP**
+- Attack: **Pass**: Deals 10 to 15 Damage and also increases Arm Power by 5;
+- Support:
+- Special Attack:
+- Special Resource: <ins>Arm Power</ins>
 ### <ins>Running Back</ins>
--Attack
--Support
--Special Attack
+- HP: **80 HP**
+- Attack:
+- Support:
+- Special Attack:
+- Special Resource: <ins>Speed</ins>
 ### <ins>Defensive Line</ins>
--Attack
--Support
--Special Attack
+- HP: **100 HP**
+- Attack:
+- Support:
+- Special Attack:
+- Special Resource:<ins>Strength</ins>
