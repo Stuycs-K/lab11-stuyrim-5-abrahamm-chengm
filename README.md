@@ -21,8 +21,9 @@ Make a clear list of features that work/dont work
 ### <ins>Quarterback</ins>
 - HP: **60 HP**
 - Attack: **Pass**: Deals 10 to 15 Damage and also increases Arm Power by 5;
-- Support:
-- Special Attack:
+- Support: **Take a Knee**: ***lose 10 Arm Power*** but heals by 10 HP
+
+- Special Attack: **Hail Mary*****( REQUIRES 20 ARM POWER )***: Deals 30 Damage but loses 20 Arm Power;
 - Special Resource: <ins>Arm Power</ins>
 ### <ins>Running Back</ins>
 - HP: **80 HP**
