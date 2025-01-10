@@ -15,16 +15,12 @@ public class Game{
   //Do not write over the blank areas where text will appear or parties will appear.
   public static void drawBackground(){
     for (int col = 1; col <= 80; col++) {
-        Text.go(1, col);
-        System.out.print(Text.colorize("_",WHITE,WHITE+BACKGROUND));
-        Text.go(30, col);
-        System.out.print(Text.colorize("_",WHITE,WHITE+BACKGROUND));
+      drawText(Text.colorize("_",WHITE,WHITE+BACKGROUND),1,col);
+      drawText(Text.colorize("_",WHITE,WHITE+BACKGROUND),30,col);
     }
     for (int row = 2; row <= 30; row++) {
-        Text.go(row, 1);
-        System.out.print(Text.colorize("|",WHITE,WHITE+BACKGROUND));
-        Text.go(row, 80);
-        System.out.print(Text.colorize("|",WHITE,WHITE+BACKGROUND));
+      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,1);
+      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,80);
     }
   }
 
