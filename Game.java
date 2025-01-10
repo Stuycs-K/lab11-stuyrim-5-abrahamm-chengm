@@ -4,6 +4,8 @@ public class Game{
   private static final int HEIGHT = 30;
   private static final int BORDER_COLOR = Text.BLACK;
   private static final int BORDER_BACKGROUND = Text.WHITE + Text.BACKGROUND;
+  public static final int WHITE = 37;
+  public static final int BACKGROUND = 10;
 
   public static void main(String[] args) {
     run();
@@ -12,18 +14,26 @@ public class Game{
   //Display the borders of your screen that will not change.
   //Do not write over the blank areas where text will appear or parties will appear.
   public static void drawBackground(){
-    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    //YOUR CODE HERE
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    for (int col = 1; col <= 80; col++) {
+        Text.go(1, col);
+        System.out.print(Text.colorize("_",WHITE,WHITE+BACKGROUND));
+        Text.go(30, col);
+        System.out.print(Text.colorize("_",WHITE,WHITE+BACKGROUND));
+    }
+    for (int row = 2; row <= 30; row++) {
+        Text.go(row, 1);
+        System.out.print(Text.colorize("|",WHITE,WHITE+BACKGROUND));
+        Text.go(row, 80);
+        System.out.print(Text.colorize("|",WHITE,WHITE+BACKGROUND));
+    }
   }
 
   //Display a line of text starting at
   //(columns and rows start at 1 (not zero) in the terminal)
   //use this method in your other text drawing methods to make things simpler.
   public static void drawText(String s,int startRow, int startCol){
-    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    //YOUR CODE HERE
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    Text.go(startRow, startCol);
+    System.out.print(s);
   }
 
   /*Use this method to place text on the screen at a particular location.
