@@ -16,6 +16,8 @@ public class Game{
   public static void drawBackground(){
     for (int col = 1; col <= 80; col++) {
       drawText(Text.colorize("_",WHITE,WHITE+BACKGROUND),1,col);
+      drawText(Text.colorize("_",WHITE,WHITE+BACKGROUND),6,col);
+      drawText(Text.colorize("_",WHITE,WHITE+BACKGROUND),25,col);
       drawText(Text.colorize("_",WHITE,WHITE+BACKGROUND),30,col);
     }
     for (int row = 2; row <= 30; row++) {
