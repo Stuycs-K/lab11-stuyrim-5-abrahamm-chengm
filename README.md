@@ -19,19 +19,28 @@ Make a clear list of features that work/dont work
 ## Adventurer Subclasses
 
 ### <ins>Quarterback</ins>
-- HP: **60 HP**
+- Initial Arm Power: **0**
+- Max Arm Power: **35**
+- Initial HP: **60 HP**
+- HP: **60 HP MAX**
 - Attack: **Pass**: Deals 10 to 15 damage to enemy and also increases self Arm Power by 5
 - Support: **Take a Knee**: ***lose 10 Arm Power*** but heals self for 10 HP
 - Special Attack: **Hail Mary** ***(Requires 20 Arm Power)***: Deals 30 damage to enemy but self loses 20 Arm Power
 - Special Resource: <ins>Arm Power</ins>
 ### <ins>Running Back</ins>
-- HP: **80 HP**
+- Initial Speed: **0**
+- Max Speed: **60**
+- Initial HP: **80 HP**
+- HP: **80 HP MAX**
 - Attack: **Rush**: Deals 5 to 10 damage to enemy and increases self speed by 10
 - Support: **Lateral**: ***give self 10% damage increase if below 40 HP***, ***otherwise only <ins>5%</ins> damage increase*** ; ***Need 25 speed to use*** ; If used remove 25 Speed from self
 - Special Attack: **Truck** ***(Requires 25 Speed)***: Deals 15 damage to enemy but self lose 25 Speed; **<ins>Permanent Stat Buff of 20% Reduction of Damage Recieved </ins>**
 - Special Resource: <ins>Speed</ins>
 ### <ins>Defensive Line</ins>
-- HP: **100 HP**
+- Initial Strength: **0**
+- Max Strength: **60**
+- Initial HP: **100 HP**
+- HP: **100 HP MAX**
 - Attack: **Tackle**: Deals 10 damage to enemy and increases self strength by 10;
 - Support: **Sideline Rest**: Self converts <ins>half</ins> of current strength to HP, adds that number to the HP and then reset self strength to **zero**
 - Support (Ally): **Protect the QB**: Heal the QB for 20 HP and give him 10 Arm Power; Self loses 30 Strength
