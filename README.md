@@ -44,6 +44,6 @@ Make a clear list of features that work/dont work
 - HP: **100 HP MAX**
 - Attack: **Tackle**: Deals 10 damage to enemy and increases self strength by 10;
 - Support: **Sideline Rest**: Self converts <ins>half</ins> of current strength to HP, adds that number to the HP and then reset self strength to **zero**
-- Support (Ally): **Protect the QB**: Heal the QB for 20 HP and give him 10 Arm Power; Self loses 30 Strength
+- Support (Ally): **Protect**: Heal the protected for 20 HP and give him 10 super charge; Self loses 30 Strength. If not enough strength, self support instead.
 - Special Attack:  **Sack** ***(Requires 25 Strength)***: Deals 30 damage to enemy but self loses 25 Strength
 - Special Resource: <ins>Strength</ins>

@@ -1,6 +1,5 @@
 public class QB extends Adventurer{
   int armPower, maxArmPower;
-  String preferredLanguage;
 
   /*the other constructors ultimately call the constructor
   *with all parameters.*/
@@ -8,7 +7,6 @@ public class QB extends Adventurer{
     super(name,hp);
     maxArmPower = 35;
     armPower = 0;
-    preferredLanguage = language;
   }
 
   public QB(String name, int hp){
