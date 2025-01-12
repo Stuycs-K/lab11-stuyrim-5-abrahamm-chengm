@@ -64,12 +64,12 @@ public class QB extends Adventurer{
     }
 
   }
-  /*Restores 5 special to other*//*
+  /*Restores 5 special to other*/
   public String support(Adventurer other){
-    return "Gives a coffee to "+other+" and restores "
-    + other.restoreSpecial(5)+" "+other.getSpecialName();
+    other.setHP(getHP()+10);
+    return "Gives a pass to "+other+" and restores 10 HP";
   }
-  */
+  
   /*Restores 6 special and 1 hp to self.*/
   public String support(){
     int hp = 10;
@@ -79,6 +79,7 @@ public class QB extends Adventurer{
     return this+" takes a kneww to restore "+hp+" HP";
   }
   else{
-    return "not enough power to take a knee at this current time."
+    return "not enough power to take a knee at this current time.";
   }
+}
 }
