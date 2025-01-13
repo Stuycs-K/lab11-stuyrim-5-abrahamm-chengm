@@ -73,7 +73,7 @@ public class Game{
         return new RB("Cook");
       }
       else{
-      return new DB("Dawkins");
+      return new DL("Dawkins");
     }
     }
 
