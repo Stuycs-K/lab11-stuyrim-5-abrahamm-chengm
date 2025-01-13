@@ -25,6 +25,9 @@ public class Game{
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,26);
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,52);
     }
+    for (int row = 7; row <= 24; row++) {
+      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,38);
+    }
     for (int row = 25; row <= 29; row++) {
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,26);
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,52);
