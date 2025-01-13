@@ -57,9 +57,7 @@ public class Game{
   *@param height the number of rows
   */
   public static void TextBox(int row, int col, int width, int height, String text){
-    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    //YOUR CODE HERE
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    Text.go(row,col);
   }
 
 
@@ -90,10 +88,10 @@ public class Game{
     * ***THIS ROW INTENTIONALLY LEFT BLANK***
     */
     public static void drawParty(ArrayList<Adventurer> party,int startRow){
-
-      /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-      //YOUR CODE HERE
-      /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+      Text.go(startRow,2);
+      for (i = 0;i<3;i++){
+        System.out.print(party.get(i));
+      }
     }
 
 
