@@ -65,7 +65,7 @@ public class Game{
     //return a random adventurer (choose between all available subclasses)
     //feel free to overload this method to allow specific names/stats.
     public static Adventurer createRandomAdventurer(){
-      int find = (int)(Math.random() + 2);
+      int find = (int)(Math.random()*3);
       if(find == 0){
         return new QB("Allen");
       }
