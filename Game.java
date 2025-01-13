@@ -25,6 +25,9 @@ public class Game{
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,26);
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,52);
     }
+    for (int row = 7; row <= 24; row++) {
+      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,38);
+    }
     for (int row = 25; row <= 29; row++) {
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,26);
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,52);
@@ -65,7 +68,7 @@ public class Game{
     //return a random adventurer (choose between all available subclasses)
     //feel free to overload this method to allow specific names/stats.
     public static Adventurer createRandomAdventurer(){
-      int find = (int)(Math.random() + 2);
+      int find = (int)(Math.random()*3);
       if(find == 0){
         return new QB("Allen");
       }
