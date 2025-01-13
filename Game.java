@@ -20,6 +20,15 @@ public class Game{
       drawText(Text.colorize("_",WHITE,WHITE+BACKGROUND),25,col);
       drawText(Text.colorize("_",WHITE,WHITE+BACKGROUND),30,col);
     }
+
+    for (int row = 2; row <= 6; row++) {
+      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,26);
+      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,52);
+    }
+    for (int row = 25; row <= 29; row++) {
+      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,26);
+      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,52);
+    }
     for (int row = 2; row <= 30; row++) {
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,1);
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,80);
