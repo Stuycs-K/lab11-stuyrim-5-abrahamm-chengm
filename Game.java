@@ -33,7 +33,14 @@ public class Game{
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,52);
     }
     for (int row = 2; row <= 30; row++) {
-      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,1);
+      drawText(Text.colorize("|",WHITE,WHI  }
+
+  public QB(){
+    this("Carmack");
+    this("Allen");
+  }
+
+  /*The next 8 methods are all required because they are abstract:*/TE+BACKGROUND),row,1);
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,80);
     }
   }
@@ -196,12 +203,12 @@ public class Game{
         //Process user input for the last Adventurer:
         if(input.startsWith("attack") || input.startsWith("a")){
           /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-          //YOUR CODE HERE
+          System.out.print(party.get(whichPlayer).attack(enemies.get(whichOpponent));
           /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
         }
         else if(input.startsWith("special") || input.startsWith("sp")){
           /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-          //YOUR CODE HERE
+          System.out.print(party.get(whichPlayer).specialAttack(enemies.get(whichOpponent));
           /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
         }
         else if(input.startsWith("su ") || input.startsWith("support ")){
