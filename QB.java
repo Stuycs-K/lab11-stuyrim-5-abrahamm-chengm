@@ -18,7 +18,7 @@ public class QB extends Adventurer{
   }
 
   public QB(){
-    this("Carmack");
+    this("Allen");
   }
 
   /*The next 8 methods are all required because they are abstract:*/
@@ -67,7 +67,7 @@ public class QB extends Adventurer{
     other.setHP(getHP()+10);
     return "Gives a pass to "+other+" and restores 10 HP";
   }
-  
+
   /*Restores 6 special and 1 hp to self.*/
   public String support(){
     int hp = 10;

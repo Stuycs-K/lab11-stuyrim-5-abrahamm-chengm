@@ -11,35 +11,35 @@ public class RB extends Adventurer{
       preferredLanguage = language;
       attackIncrease = false;
     }
-  
+
     public RB(String name, int hp){
       this(name,hp,"c++");
     }
-  
+
     public RB(String name){
       this(name,80);
     }
-  
+
     public RB(){
       this("Cook");
     }
     /*The next 8 methods are all required because they are abstract:*/
     public String getSpecialName(){
-      return "caffeine";
+      return "speed";
     }
-  
+
     public int getSpecial(){
       return speed;
     }
-  
+
     public void setSpecial(int n){
       speed = n;
     }
-  
+
     public int getSpecialMax(){
       return maxSpeed;
     }
-  
+
     /*Deal 5-10 damage to opponent, restores 10 speed*/
     public String attack(Adventurer other){
       int damage = (int)(Math.random()*6)+5;
@@ -51,7 +51,7 @@ public class RB extends Adventurer{
       return this + " rushed "+ other + " and dealt "+ damage +
       " points of damage. They then get more warmed up and gain speed.";
     }
-  
+
     /*Deal 15 damage to opponent, only if caffeine is high enough.
     *Reduces caffeine by 25.
     */
@@ -65,12 +65,12 @@ public class RB extends Adventurer{
         }
         setHP(getHP()+15);
         return this + "used their speed to truck through the enemy." +
-        " This hurt "+other+" dealing "+ damage +" points of damage." +"Also " + 
+        " This hurt "+other+" dealing "+ damage +" points of damage." +"Also " +
         "get a health increase of 5. However, self lost 25 speed";
       }else{
         return "Not enough speed to truck. Instead "+attack(other);
       }
-  
+
     }
     /*cannot support other*/
     public String support(Adventurer other){
@@ -88,4 +88,3 @@ public class RB extends Adventurer{
       }
     }
   }
-  
