@@ -65,20 +65,6 @@ public class Game{
   */
   public static void TextBox(int row, int col, int width, int height, String text){
     Text.go(row,col);
-    for (int i = 0; i < height; i++){
-      String printer = "";
-      for (int b = 0; b < width; b++){
-        if (text.length() > 0){
-          printer = printer + text.substring(0,1);
-          text = text.substring(1);
-        }
-        else{
-          printer = printer + " ";
-        }
-      }
-      System.out.print(printer);
-      Text.go(row+1,col);
-    }
   }
 
 
@@ -198,7 +184,7 @@ public class Game{
 
     //You can add parameters to draw screen!
     drawScreen(enemies,party);//initial state.
-    Text
+
     //Main loop
 
     //display this prompt at the start of the game.
@@ -229,7 +215,7 @@ public class Game{
           //"support 0" or "su 0" or "su 2" etc.
           //assume the value that follows su  is an integer.
           /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-          //YOUR CODE HERE
+          //Your Code Here
           /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
         }
 
@@ -260,7 +246,19 @@ public class Game{
         //enemy attacks a randomly chosen person with a randomly chosen attack.z`
         //Enemy action choices go here!
         /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-        //YOUR CODE HERE
+        int random = (int)(Math.random()*3);
+        int whichPlayer = (int)(Math.random()*2);
+        if(random == 0){
+          enemies.get(whichOpponent).attack(party.get(whichPlayer));
+        }
+        if(random == 1){
+          enemies.get(whichOpponent).specialAttack(party.get(whichPlayer));
+        }/*
+        figure out the support with different integers
+        if(random == 2){
+          enemies.get(whichOpponent).attack(party.get(whichPlayer));
+        }
+        */
         /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 
