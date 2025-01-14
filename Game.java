@@ -88,6 +88,8 @@ public class Game{
           }
         }
       }
+      System.out.print(res);
+      Text.go(row+1,col);
     }
   }
 
