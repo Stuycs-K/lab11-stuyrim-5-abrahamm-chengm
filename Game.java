@@ -88,7 +88,7 @@ public class Game{
     * ***THIS ROW INTENTIONALLY LEFT BLANK***
     */
     public static void drawParty(ArrayList<Adventurer> party,int startRow){
-      for (int is = 0;is<3;is++){
+      for (int is = 0;is<party.size();is++){
         Text.go(startRow,2+is*26);
         System.out.print(party.get(is).getName());
         Text.go(startRow+1,2+is*26);
@@ -116,7 +116,7 @@ public class Game{
   //Display the party and enemies
   //Do not write over the blank areas where text will appear.
   //Place the cursor at the place where the user will by typing their input at the end of this method.
-  public static void drawScreen(ArrayList<Adventurer>enemies, ArrayList<Adventurer>friends){
+  public static void drawScreen(ArrayList<Adventurer>enemies){
 
     drawBackground();
 
@@ -177,7 +177,7 @@ public class Game{
     //Draw the window border
 
     //You can add parameters to draw screen!
-    drawScreen();//initial state.
+    drawScreen(enemies);//initial state.
 
     //Main loop
 
@@ -263,7 +263,7 @@ public class Game{
       }
 
       //display the updated screen after input has been processed.
-      drawScreen();
+      drawScreen(enemies);
 
 
     }//end of main game loop
