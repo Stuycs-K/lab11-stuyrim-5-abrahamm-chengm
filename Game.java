@@ -33,14 +33,7 @@ public class Game{
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,52);
     }
     for (int row = 2; row <= 30; row++) {
-      drawText(Text.colorize("|",WHITE,WHI  }
-
-  public QB(){
-    this("Carmack");
-    this("Allen");
-  }
-
-  /*The next 8 methods are all required because they are abstract:*/TE+BACKGROUND),row,1);
+      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,1);
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,80);
     }
   }
@@ -66,18 +59,35 @@ public class Game{
   public static void TextBox(int row, int col, int width, int height, String text){
     Text.go(row,col);
     for (int i = 0; i < height; i++){
-      String printer = "";
-      for (int b = 0; b < width; b++){
-        if (text.length() > 0){
-          printer = printer + text.substring(0,1);
-          text = text.substring(1);
+      String res = "";
+      while (res.length()<width){
+        if (text.indexOf(" ")==-1){
+          if (text.length()==0) res = res + " ";
+          else{
+            if (text.length()<width){
+              if (text.length()+res.length()>width) res = res + " ";
+              else{
+                res = res + text.substring(0,1);
+                text = text.substring(1);
+              }
+            }
+            else{
+              res = res + text.substring(0,1);
+              text = text.substring(1);
+            }
+          }
         }
-        else{
-          printer = printer + " ";
+        if (text.indexOf(" ")>width){
+          res = res + " ";
+        }
+        if (text.indexOf(" ")<width){
+          if(text.length()==0)res = res + " ";
+          else{
+            res = res + text.substring(0,1);
+            text = text.substring(1);
+          }
         }
       }
-      System.out.print(printer);
-      Text.go(row+1,col);
     }
   }
 
@@ -198,7 +208,7 @@ public class Game{
 
     //You can add parameters to draw screen!
     drawScreen(enemies,party);//initial state.
-    Text
+    TextBox(8,40,39,16,"tester, tester, one, two, three, four, five");
     //Main loop
 
     //display this prompt at the start of the game.
@@ -217,12 +227,12 @@ public class Game{
         //Process user input for the last Adventurer:
         if(input.startsWith("attack") || input.startsWith("a")){
           /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-          System.out.print(party.get(whichPlayer).attack(enemies.get(whichOpponent));
+          System.out.print(party.get(whichPlayer).attack(enemies.get(whichOpponent)));
           /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
         }
         else if(input.startsWith("special") || input.startsWith("sp")){
           /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-          System.out.print(party.get(whichPlayer).specialAttack(enemies.get(whichOpponent));
+          System.out.print(party.get(whichPlayer).specialAttack(enemies.get(whichOpponent)));
           /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
         }
         else if(input.startsWith("su ") || input.startsWith("support ")){
