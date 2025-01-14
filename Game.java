@@ -88,9 +88,13 @@ public class Game{
     * ***THIS ROW INTENTIONALLY LEFT BLANK***
     */
     public static void drawParty(ArrayList<Adventurer> party,int startRow){
-      Text.go(startRow,2);
       for (i = 0;i<3;i++){
-        System.out.print(party.get(i));
+        Text.go(startRow,2+i*26);
+        System.out.print(party.get(i).getName());
+        Text.go(startRow+1,2+i*26);
+        System.out.print("HP: "+party.get(i).getHP());
+        Text.go(startRow+2,2+i*26);
+        System.out.print(party.get(i).getSpecialName()+": "+party.get(i).getSpecial());
       }
     }
 
