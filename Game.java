@@ -88,13 +88,13 @@ public class Game{
     * ***THIS ROW INTENTIONALLY LEFT BLANK***
     */
     public static void drawParty(ArrayList<Adventurer> party,int startRow){
-      for (i = 0;i<3;i++){
-        Text.go(startRow,2+i*26);
-        System.out.print(party.get(i).getName());
-        Text.go(startRow+1,2+i*26);
-        System.out.print("HP: "+party.get(i).getHP());
-        Text.go(startRow+2,2+i*26);
-        System.out.print(party.get(i).getSpecialName()+": "+party.get(i).getSpecial());
+      for (int is = 0;is<3;is++){
+        Text.go(startRow,2+is*26);
+        System.out.print(party.get(is).getName());
+        Text.go(startRow+1,2+is*26);
+        System.out.print("HP: "+party.get(is).getHP());
+        Text.go(startRow+2,2+is*26);
+        System.out.print(party.get(is).getSpecialName()+": "+party.get(is).getSpecial());
       }
     }
 
@@ -116,11 +116,11 @@ public class Game{
   //Display the party and enemies
   //Do not write over the blank areas where text will appear.
   //Place the cursor at the place where the user will by typing their input at the end of this method.
-  public static void drawScreen(){
+  public static void drawScreen(ArrayList<Adventurer>enemies, ArrayList<Adventurer>friends){
 
     drawBackground();
 
-    //draw player party
+    drawParty(enemies,2);
 
     //draw enemy party
 
@@ -155,10 +155,10 @@ public class Game{
     //If only 1 enemy is added it should be the boss class.
     //start with 1 boss and modify the code to allow 2-3 adventurers later.
     ArrayList<Adventurer>enemies = new ArrayList<Adventurer>();
-    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    //YOUR CODE HERE
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-    enemies.add(createRandomAdventurer());
+    int enmnum = (int)(Math.random()*3);
+    for (int i22=0;i22<enmnum+1;i22++){
+      enemies.add(createRandomAdventurer());
+    }
     //Adventurers you control:
     //Make an ArrayList of Adventurers and add 2-4 Adventurers to it.
     ArrayList<Adventurer> party = new ArrayList<>();
