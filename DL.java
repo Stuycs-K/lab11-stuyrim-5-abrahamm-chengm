@@ -1,7 +1,7 @@
 public class DL extends Adventurer{
     int strength, maxStrength;
     String preferredLanguage;
-  
+
     /*the other constructors ultimately call the constructor
     *with all parameters.*/
     public DL(String name, int hp, String language){
@@ -10,36 +10,36 @@ public class DL extends Adventurer{
       strength = 0;
       preferredLanguage = language;
     }
-  
+
     public DL(String name, int hp){
       this(name,hp,"c++");
     }
-  
+
     public DL(String name){
       this(name,100);
     }
-  
+
     public DL(){
       this("Dawkins");
     }
-  
+
     /*The next 8 methods are all required because they are abstract:*/
     public String getSpecialName(){
-      return "strength";
+      return "Strength";
     }
-  
+
     public int getSpecial(){
       return strength;
     }
-  
+
     public void setSpecial(int n){
       strength = n;
     }
-  
+
     public int getSpecialMax(){
       return maxStrength;
     }
-  
+
     /*Deal 10 damage to opponent, restores 10 Strength*/
     public String attack(Adventurer other){
       int damage = 10;
@@ -48,7 +48,7 @@ public class DL extends Adventurer{
       return this + " tackled "+ other + " and dealt "+ damage +
       " points of damage. They then gain strength .";
     }
-  
+
     /*Deal 30 damage to opponent, only if strength is high enough.
     *Reduces strength by 25.
     */
@@ -62,7 +62,7 @@ public class DL extends Adventurer{
       }else{
         return "Not enough strength to sack. Instead "+attack(other);
       }
-  
+
     }
     /*Restores 10 special to other and give 20 HP if strength is more than 30*/
     public String support(Adventurer other){

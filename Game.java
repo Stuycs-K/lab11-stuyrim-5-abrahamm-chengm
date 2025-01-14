@@ -116,13 +116,13 @@ public class Game{
   //Display the party and enemies
   //Do not write over the blank areas where text will appear.
   //Place the cursor at the place where the user will by typing their input at the end of this method.
-  public static void drawScreen(ArrayList<Adventurer>enemies){
+  public static void drawScreen(ArrayList<Adventurer>enemies,ArrayList<Adventurer>friends){
 
     drawBackground();
 
     drawParty(enemies,2);
 
-    //draw enemy party
+    drawParty(friends,26);
 
   }
 
@@ -162,10 +162,8 @@ public class Game{
     //Adventurers you control:
     //Make an ArrayList of Adventurers and add 2-4 Adventurers to it.
     ArrayList<Adventurer> party = new ArrayList<>();
-    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-    //YOUR CODE HERE
-    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-    for(int i = 0; i < 2; i++){
+    int frinum = (int)(Math.random()*2);
+    for(int i = 0; i < frinum+2; i++){
       party.add(createRandomAdventurer());
     }
     boolean partyTurn = true;
@@ -177,7 +175,7 @@ public class Game{
     //Draw the window border
 
     //You can add parameters to draw screen!
-    drawScreen(enemies);//initial state.
+    drawScreen(enemies,party);//initial state.
 
     //Main loop
 
@@ -263,7 +261,7 @@ public class Game{
       }
 
       //display the updated screen after input has been processed.
-      drawScreen(enemies);
+      drawScreen(enemies,party);
 
 
     }//end of main game loop
