@@ -124,6 +124,7 @@ public class Game{
 
     drawParty(friends,26);
 
+    Text.go(8,3);
   }
 
   public static String userInput(Scanner in){
