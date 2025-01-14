@@ -65,6 +65,20 @@ public class Game{
   */
   public static void TextBox(int row, int col, int width, int height, String text){
     Text.go(row,col);
+    for (int i = 0; i < height; i++){
+      String printer = "";
+      for (int b = 0; b < width; b++){
+        if (text.length() > 0){
+          printer = printer + text.substring(0,1);
+          text = text.substring(1);
+        }
+        else{
+          printer = printer + " ";
+        }
+      }
+      System.out.print(printer);
+      Text.go(row+1,col);
+    }
   }
 
 
@@ -184,7 +198,7 @@ public class Game{
 
     //You can add parameters to draw screen!
     drawScreen(enemies,party);//initial state.
-
+    Text
     //Main loop
 
     //display this prompt at the start of the game.
