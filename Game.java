@@ -148,7 +148,7 @@ public class Game{
   }
 
   public static String userInput(Scanner in){
-      Text.go(8,3);
+      Text.go(10,3);
 
       Text.showCursor();
 
@@ -204,11 +204,10 @@ public class Game{
     TextBox(8,3,34,2,preprompt);
 
     while(! (input.equalsIgnoreCase("q") || input.equalsIgnoreCase("quit"))){
-      //Read user input
       input = userInput(in);
 
       //example debug statment
-      TextBox(24,2,1,78,"input: "+input+" partyTurn:"+partyTurn+ " whichPlayer="+whichPlayer+ " whichOpp="+whichOpponent );
+      TextBox(11,2,20,78,"input: "+input+" partyTurn:"+partyTurn+ " whichPlayer="+whichPlayer+ " whichOpp="+whichOpponent );
 
       //display event based on last turn's input
       if(partyTurn){
