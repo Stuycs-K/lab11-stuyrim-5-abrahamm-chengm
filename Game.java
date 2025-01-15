@@ -214,14 +214,10 @@ public class Game{
 
         //Process user input for the last Adventurer:
         if(input.startsWith("attack") || input.startsWith("a")){
-          /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-          System.out.print(party.get(whichPlayer).attack(enemies.get(whichOpponent)));
-          /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+          TextBox(11,3,34,10,party.get(whichPlayer).attack(enemies.get(whichOpponent)));
         }
         else if(input.startsWith("special") || input.startsWith("sp")){
-          /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-          System.out.print(party.get(whichPlayer).specialAttack(enemies.get(whichOpponent)));
-          /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+          TextBox(11,3,34,10,party.get(whichPlayer).specialAttack(enemies.get(whichOpponent)));
         }
         else if(input.startsWith("su ") || input.startsWith("support ")){
           //"support 0" or "su 0" or "su 2" etc.
