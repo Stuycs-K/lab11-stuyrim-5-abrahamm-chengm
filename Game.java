@@ -260,17 +260,39 @@ public class Game{
         /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
         int random = (int)(Math.random()*3);
         whichPlayer = (int)(Math.random()*2);
+        int randomSupport = (int)(Math.random() * 3);
         if(random == 0){
           enemies.get(whichOpponent).attack(party.get(whichPlayer));
         }
         if(random == 1){
           enemies.get(whichOpponent).specialAttack(party.get(whichPlayer));
-        }/*
-        figure out the support with different integers
-        if(random == 2){
-          enemies.get(whichOpponent).attack(party.get(whichPlayer));
         }
-        */
+        if(random == 2){
+        if(randomSupport == 0){
+          if (whichOpponent == 0){
+            System.out.print(enemies.get(whichOpponent).support());
+          }
+          else{
+            System.out.print(enemies.get(whichOpponent).support(enemies.get(0)));
+          }
+        }
+        if(randomSupport == 1 && enemies.size() >1 ){
+          if (whichOpponent == 1){
+            System.out.print(enemies.get(whichOpponent).support());
+          }
+          else{
+            System.out.print(enemies.get(whichOpponent).support(enemies.get(1)));
+          }
+        }
+        if(randomSupport == 2 && enemies.size()  > 2){
+          if (whichOpponent == 2){
+            System.out.print(enemies.get(whichOpponent).support());
+          }
+          else{
+            System.out.print(enemies.get(whichOpponent).support(enemies.get(2)));
+          }
+        }
+      }
         /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 
