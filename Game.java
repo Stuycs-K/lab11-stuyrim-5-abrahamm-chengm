@@ -223,7 +223,38 @@ public class Game{
           //"support 0" or "su 0" or "su 2" etc.
           //assume the value that follows su  is an integer.
           /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-          //Your Code Here
+          if(input.contains("0")){
+            if (whichPlayer == 0){
+              System.out.print(party.get(whichPlayer).support());
+            }
+            else{
+              System.out.print(party.get(whichPlayer).support(party.get(0)));
+            }
+          }
+          if(input.contains("1") && party.size() >1 ){
+            if (whichPlayer == 1){
+              System.out.print(party.get(whichPlayer).support());
+            }
+            else{
+              System.out.print(party.get(whichPlayer).support(party.get(1)));
+            }
+          }
+          if(input.contains("2") && party.size()  > 2){
+            if (whichPlayer == 2){
+              System.out.print(party.get(whichPlayer).support());
+            }
+            else{
+              System.out.print(party.get(whichPlayer).support(party.get(2)));
+            }
+          }
+          if(input.contains("3") && party.size()  > 3){
+            if (whichPlayer == 3){
+              System.out.print(party.get(whichPlayer).support());
+            }
+            else{
+              System.out.print(party.get(whichPlayer).support(party.get(3)));
+            }
+          }
           /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
         }
 
