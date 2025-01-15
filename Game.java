@@ -197,11 +197,11 @@ public class Game{
 
     //You can add parameters to draw screen!
     drawScreen(enemies,party);//initial state.
-    TextBox(8,40,39,16,"tester, tester, one, two, three, four, five, why why why why why why");
     //Main loop
 
     //display this prompt at the start of the game.
     String preprompt = "Enter command for "+party.get(whichPlayer)+": attack/special/quit";
+    TextBox(8,3,34,2,preprompt);
 
     while(! (input.equalsIgnoreCase("q") || input.equalsIgnoreCase("quit"))){
       //Read user input
