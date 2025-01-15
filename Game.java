@@ -23,14 +23,14 @@ public class Game{
 
     for (int row = 2; row <= 6; row++) {
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,26);
-      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,52);
+      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,51);
     }
     for (int row = 7; row <= 24; row++) {
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,38);
     }
     for (int row = 25; row <= 29; row++) {
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,26);
-      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,52);
+      drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,51);
     }
     for (int row = 2; row <= 30; row++) {
       drawText(Text.colorize("|",WHITE,WHITE+BACKGROUND),row,1);
@@ -109,11 +109,11 @@ public class Game{
     */
     public static void drawParty(ArrayList<Adventurer> party,int startRow){
       for (int is = 0;is<party.size();is++){
-        Text.go(startRow,2+is*26);
+        Text.go(startRow,3+is*25);
         System.out.print(party.get(is).getName());
-        Text.go(startRow+1,2+is*26);
+        Text.go(startRow+1,3+is*25);
         System.out.print("HP: "+party.get(is).getHP());
-        Text.go(startRow+2,2+is*26);
+        Text.go(startRow+2,3+is*25);
         System.out.print(party.get(is).getSpecialName()+": "+party.get(is).getSpecial());
       }
     }
@@ -197,11 +197,11 @@ public class Game{
 
     //You can add parameters to draw screen!
     drawScreen(enemies,party);//initial state.
-    TextBox(8,40,39,16,"tester, tester, one, two, three, four, five, why why why why why why");
     //Main loop
 
     //display this prompt at the start of the game.
     String preprompt = "Enter command for "+party.get(whichPlayer)+": attack/special/quit";
+    TextBox(8,3,34,2,preprompt);
 
     while(! (input.equalsIgnoreCase("q") || input.equalsIgnoreCase("quit"))){
       //Read user input
