@@ -58,38 +58,23 @@ public class Game{
   */
   public static void TextBox(int row, int col, int width, int height, String text){
     Text.go(row,col);
-    for (int i = 0; i < height; i++){
+    String[] words = text.split(" ");
+    int next = 0;
+    for (int i = 0; i < height;i++){
       String res = "";
       while (res.length()<width){
-        if (text.indexOf(" ")==-1){
-          if (text.length()==0) res = res + " ";
-          else{
-            if (text.length()<width){
-              if (text.length()+res.length()>width) res = res + " ";
-              else{
-                res = res + text.substring(0,1);
-                text = text.substring(1);
-              }
-            }
-            else{
-              res = res + text.substring(0,1);
-              text = text.substring(1);
-            }
+        if(words.length > next){
+          if (res.length() + words[next].length()<width){
+            res = res + words[next] + " ";
+            next++;
           }
-        }
-        if (text.indexOf(" ")>width){
-          res = res + " ";
-        }
-        if (text.indexOf(" ")<width){
-          if(text.length()==0)res = res + " ";
           else{
-            res = res + text.substring(0,1);
-            text = text.substring(1);
+            res = res + " ";
           }
         }
       }
       System.out.print(res);
-      Text.go(row+1,col);
+      Text.go(row+1+i,col);
     }
   }
 
@@ -210,7 +195,7 @@ public class Game{
 
     //You can add parameters to draw screen!
     drawScreen(enemies,party);//initial state.
-    TextBox(8,40,39,16,"tester, tester, one, two, three, four, five");
+    TextBox(8,40,39,16,"tester, tester, one, two, three, four, five, why why why why why why");
     //Main loop
 
     //display this prompt at the start of the game.
@@ -273,7 +258,7 @@ public class Game{
         //Enemy action choices go here!
         /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
         int random = (int)(Math.random()*3);
-        int whichPlayer = (int)(Math.random()*2);
+        whichPlayer = (int)(Math.random()*2);
         if(random == 0){
           enemies.get(whichOpponent).attack(party.get(whichPlayer));
         }
