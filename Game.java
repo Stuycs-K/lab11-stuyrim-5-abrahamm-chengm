@@ -205,12 +205,22 @@ public class Game{
 
     while(! (input.equalsIgnoreCase("q") || input.equalsIgnoreCase("quit"))){
       input = userInput(in);
+      boolean works = false;
+        if (input.startsWith("attack") || input.startsWith("a")||input.startsWith("special") || input.startsWith("sp")||input.startsWith("su ") || input.startsWith("support ")){
+          works=true;
+        }
+        else{
+          String fail = "Bad input. Enter command for "+party.get(whichPlayer)+": attack/a/special/sp/support/su/quit/q";
+          TextBox(11,3,34,10,fail);
+        }
 
       //example debug statment
       //TextBox(11,2,20,78,"input: "+input+" partyTurn:"+partyTurn+ " whichPlayer="+whichPlayer+ " whichOpp="+whichOpponent );
 
       //display event based on last turn's input
-      if(partyTurn){
+
+      if(partyTurn&&works){
+
 
         //Process user input for the last Adventurer:
         if(input.startsWith("attack") || input.startsWith("a")){
@@ -255,7 +265,6 @@ public class Game{
               System.out.print(party.get(whichPlayer).support(party.get(3)));
             }
           }
-          /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
         }
 
         //You should decide when you want to re-ask for user input
@@ -278,7 +287,7 @@ public class Game{
           whichOpponent = 0;
         }
         //done with one party member
-      }else{
+      }else if (works){
         //not the party turn!
 
 
