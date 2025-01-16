@@ -205,13 +205,14 @@ public class Game{
 
     while(! (input.equalsIgnoreCase("q") || input.equalsIgnoreCase("quit"))){
       input = userInput(in);
+      TextBox(8,3,34,2,preprompt);
       boolean works = false;
         if (input.startsWith("attack") || input.startsWith("a")||input.startsWith("special") || input.startsWith("sp")||input.startsWith("su ") || input.startsWith("support ")){
           works=true;
         }
         else{
-          String fail = "Bad input. Enter command for "+party.get(whichPlayer)+": attack/a/special/sp/support/su/quit/q";
-          TextBox(11,3,34,10,fail);
+          String fail = "Bad input. Enter command for "+party.get(whichPlayer)+": (attack/a) / (special/sp) / (support/su) / (quit/q)";
+          TextBox(11,3,34,3,fail);
         }
 
       //example debug statment
@@ -224,10 +225,10 @@ public class Game{
 
         //Process user input for the last Adventurer:
         if(input.startsWith("attack") || input.startsWith("a")){
-          TextBox(11,3,34,10,party.get(whichPlayer).attack(enemies.get(whichOpponent)));
+          TextBox(14,3,34,10,party.get(whichPlayer).attack(enemies.get(whichOpponent)));
         }
         else if(input.startsWith("special") || input.startsWith("sp")){
-          TextBox(11,3,34,10,party.get(whichPlayer).specialAttack(enemies.get(whichOpponent)));
+          TextBox(14,3,34,10,party.get(whichPlayer).specialAttack(enemies.get(whichOpponent)));
         }
         else if(input.startsWith("su ") || input.startsWith("support ")){
           //"support 0" or "su 0" or "su 2" etc.
