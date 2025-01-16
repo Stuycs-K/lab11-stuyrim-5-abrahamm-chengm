@@ -205,7 +205,8 @@ public class Game{
 
     while(! (input.equalsIgnoreCase("q") || input.equalsIgnoreCase("quit"))){
       input = userInput(in);
-      TextBox(8,3,34,2,preprompt);
+      String reprompt = "Enter command for "+party.get(whichPlayer+1)+": attack/special/quit";
+      TextBox(8,3,34,2,reprompt);
       boolean works = false;
         if (input.startsWith("attack") || input.startsWith("a")||input.startsWith("special") || input.startsWith("sp")||input.startsWith("su ") || input.startsWith("support ")){
           works=true;
