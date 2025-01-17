@@ -296,10 +296,10 @@ public class Game{
         whichPlayer = (int)(Math.random()*2);
         int randomSupport = (int)(Math.random() * 3);
         if(random == 0){
-          enemies.get(whichOpponent).attack(party.get(whichPlayer));
+          TextBox(11,42,34,10,(enemies.get(whichOpponent).attack(party.get(whichPlayer))));
         }
         if(random == 1){
-          enemies.get(whichOpponent).specialAttack(party.get(whichPlayer));
+          TextBox(11,42,34,10,(enemies.get(whichOpponent).specialAttack(party.get(whichPlayer))));
         }
         if(random == 2){
         if(randomSupport == 0){
@@ -346,7 +346,9 @@ public class Game{
         partyTurn=true;
         //display this prompt before player's turn
         String prompt = "Enter command for "+party.get(whichPlayer)+": attack/special/quit";
+        TextBox(11,3,34,10,prompt);
       }
+
 
       //display the updated screen after input has been processed.
       drawScreen(enemies,party);
