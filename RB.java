@@ -6,7 +6,7 @@ public class RB extends Adventurer{
     *with all parameters.*/
     public RB(String name, int hp, String language){
       super(name,hp);
-      speed = 12;
+      speed = 0;
       maxSpeed = 60;
       preferredLanguage = language;
       attackIncrease = false;

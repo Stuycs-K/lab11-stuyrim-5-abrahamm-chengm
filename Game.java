@@ -202,15 +202,15 @@ public class Game{
     //display this prompt at the start of the game.
     String preprompt = "Enter command for "+party.get(whichPlayer)+": attack/special/quit";
     TextBox(8,3,34,2,preprompt);
-
-    while(! (input.equalsIgnoreCase("q") || input.equalsIgnoreCase("quit"))){
+    boolean end = false;
+    while((! (input.equalsIgnoreCase("q") || input.equalsIgnoreCase("quit"))) && !end){
       input = userInput(in);
 
       //example debug statment
       //TextBox(11,2,20,78,"input: "+input+" partyTurn:"+partyTurn+ " whichPlayer="+whichPlayer+ " whichOpp="+whichOpponent );
 
       //display event based on last turn's input
-      boolean end = false;
+      
       for ( int i = 0; i < enemies.size(); i ++){
         if (enemies.get(i).getHP() <= 0){
           end = true;
@@ -274,7 +274,7 @@ public class Game{
           TextBox(8,3,34,2,reprompt);
         }
         
-        if(whichPlayer < party.size() -1 && works && !end ){
+        if(whichPlayer < party.size() -1 && works && !end){
           //This is a player turn.
           //Decide where to draw the following prompt:
           whichPlayer++;
@@ -292,7 +292,9 @@ public class Game{
         
       }
       else if(end){
-        quit();}
+        TextBox(22,3,34,10,"Game over");
+        quit();
+      }
         else {
         //not the party turn!
 
@@ -355,15 +357,17 @@ public class Game{
         quit();
       }
       //modify this if statement.
-      if(!partyTurn && whichOpponent == enemies.size() - 1 && !endParty){
+      if(whichOpponent == enemies.size()){
         //THIS BLOCK IS TO END THE ENEMY TURN
         //It only triggers after the last enemy goes.
-        whichPlayer = 0;
         turn++;
-        partyTurn=true;
+        
+        whichOpponent = 0;
+        whichPlayer = 0;
         //display this prompt before player's turn
         String prompt = "Enter command for "+party.get(whichPlayer)+": attack/special/quit";
         TextBox(20,3,34,10,prompt);
+        partyTurn=true;
       }
 
 
