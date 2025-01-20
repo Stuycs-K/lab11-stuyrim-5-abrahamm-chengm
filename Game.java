@@ -285,9 +285,8 @@ public class Game{
             }
           }
         }
-        if (!(input.startsWith("a ")) && !(input.startsWith("attack ")) && !(input.startsWith("sp ")) && !(input.startsWith("special ")) && !(input.startsWith("su ")) && !(input.startsWith("support "))){
-          works = false;
-          String reprompt = "Re-enter command for "+party.get(whichPlayer)+": attack/special/quit. Possible errors include no number or invalid command";
+        String reprompt = "Re-enter command for "+party.get(whichPlayer)+": attack/special/quit";
+        if (!(input.startsWith("a ")) && !(input.startsWith("attack ")) && !(input.startsWith("sp ")) && !(input.startsWith("special ")) && !(input.startsWith("su ")) && !(input.startsWith("support ")) && !(input.contains(" 0")) && !(input.contains(" 1")) && !(input.contains(" 2"))){
           TextBox(8,3,34,2,reprompt);
         }
           
@@ -300,7 +299,7 @@ public class Game{
         }else if(works && !end){
           //This is after the player's turn, and allows the user to see the enemy turn
           //Decide where to draw the following prompt:
-          String prompt = "press enter to see monster's turn";
+          String prompt = "press enter to see next monster's turn";
           TextBox(22,3,34,10,prompt);
           partyTurn = false;
           whichOpponent = 0;
