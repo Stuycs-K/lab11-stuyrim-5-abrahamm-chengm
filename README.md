@@ -5,14 +5,23 @@
 
 Make a clear list of features that work/dont work
 
-:white_check_mark: This feature works.
-
-:question: This feature works partially.
-
-:ballot_box_with_check: This extra (beyond the things that the lab was supposed to do) feature works.
-
-:x: This required feature does not work.
-
+:white_check_mark: QB can attack and special attack toward specified targets.
+:white_check_mark: RB can attack and special attack toward specified targets.
+:white_check_mark: DL can attack and special attack toward specified targets.
+:white_check_mark: Boss can attack and special attack toward random target.
+:white_check_mark: QB can support self and support ally.
+:white_check_mark: Boss can support self.
+:white_check_mark: RB can support self.
+:white_check_mark: DL can support self and support ally.
+:ballot_box_with_check: The game starts with random amount of adventurers.
+:ballot_box_with_check: Adventurers have multiple possible names in each subclass.
+:ballot_box_with_check: Color by percent for HP works well.
+:ballot_box_with_check: Provided max hp and max of special amount.
+:question: Turn order works, but wording while playing may be a bit confusing.
+:white_check_mark: Reprompts when invalid input.
+:white_check_mark: Game is able to randomly input enemy party move.
+:white_check_mark: Game able to end when no HP is left on either side.
+:ballot_box_with_check: Winner specified at game end.
 :beetle: This is a bug that affects the game.
 
 

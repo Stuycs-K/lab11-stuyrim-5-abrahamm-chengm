@@ -348,7 +348,7 @@ public class Game{
         
       }
       else if(end){
-        TextBox(22,3,34,10,"Game over");
+        TextBox(22,3,34,10,"Game over. Good party wins.");
         quit();
       }
       for(int i = 0; i < party.size(); i++){
@@ -434,6 +434,10 @@ public class Game{
           String prompt = "Enter command for "+party.get(whichPlayer)+": attack/special/quit";
           TextBox(20,3,34,10,prompt);
         }
+      }
+      else if(endParty){
+        TextBox(22,3,34,10,"Game over. Enemies win.");
+        quit();
       }
         
 
