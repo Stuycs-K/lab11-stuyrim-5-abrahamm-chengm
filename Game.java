@@ -86,7 +86,7 @@ public class Game{
     //return a random adventurer (choose between all available subclasses)
     //feel free to overload this method to allow specific names/stats.
     public static Adventurer createRandomAdventurer(){
-      int find = (int)(Math.random()*3);
+      int find = (int)(Math.random()*4);
       int find2 = (int)(Math.random()*3);
       if(find == 0){
         if (find2 == 0){
@@ -110,9 +110,9 @@ public class Game{
           return new RB("Henry (RB)");
         }
       }
-      else{
+      else if(find==2){
         if (find2 == 0){
-          return new DL();
+          return new TE();
         }
         else if (find2 == 1){
           return new DL("Heyward (DL)");
@@ -120,7 +120,18 @@ public class Game{
         else{
           return new DL("Hendrickson (DL)");
         }
-    }
+      }
+      else{
+        if (find2 == 0){
+          return new TE();
+        }
+        else if (find2 == 1){
+          return new TE("Goddert (TE)");
+        }
+        else{
+          return new TE("Pitts (TE)");
+        }
+      }
     }
 
     /*Display a List of 2-4 adventurers on the rows row through row+3 (4 rows max)
