@@ -62,8 +62,10 @@ public class QB extends Adventurer{
     }
 
   }
-  /*Restores 5 special to other*/
+  /*Restores 10 special to other if enough arm power*/
   public String support(Adventurer other){
+    if(getSpecial() >= 10){
+      setSpecial(getSpecial() - 10);
     if(other.getHP() < other.getmaxHP() - 10){
     other.setHP(other.getHP()+10);
     return "Gives a pass to "+other+" and restores 10 HP.";
@@ -72,6 +74,10 @@ public class QB extends Adventurer{
       other.setHP((other.getmaxHP()));
       return "Gives a pass to " + other + " and restores back to max.";
     }
+  }
+  else{
+    return "Not enough arm strength to heal teammate.";
+  }
   }
 
   /*Restores 10 hp to self.*/
