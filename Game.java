@@ -393,9 +393,6 @@ public class Game{
           String prompt = "Press enter for "+enemies.get(whichOpponent)+" next turn.";
           TextBox(15,42,34,10,prompt);
         }
-        
-        
-        //modify this if statement.
         else {
           //THIS BLOCK IS TO END THE ENEMY TURN
           //It only triggers after the last enemy goes.
