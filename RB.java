@@ -85,7 +85,7 @@ public class RB extends Adventurer{
     }
     /*cannot support other*/
     public String support(Adventurer other){
-      return "Nothing happenening here. Instead "
+      return "Nothing happens here. Instead "
       + support();
     }
     /*Gain damage increase based off of health.*/
@@ -96,7 +96,7 @@ public class RB extends Adventurer{
       return this+" drinks gatorade to increase attack power.";
       }
       else{
-        return this + "does nothing.";
+        return this + " does nothing.";
       }
     }
   }

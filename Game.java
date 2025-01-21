@@ -318,11 +318,11 @@ public class Game{
           }
         }
         String reprompt = "Re-enter command for "+party.get(whichPlayer)+": attack(a)+target / special(sp)+target / support(su)+taregt / quit(q)";
-        if ((!(input.startsWith("a ")) && !(input.startsWith("attack ")) && !(input.startsWith("sp ")) && !(input.startsWith("special ")) && !(input.startsWith("su ")) && !(input.startsWith("support ")) ) || (!(input.contains("0")) && !(input.contains("1")) && !(input.contains("2")))){
+        if ((!(input.startsWith("a")) && !(input.startsWith("attack")) && !(input.startsWith("sp")) && !(input.startsWith("special")) && !(input.startsWith("su")) && !(input.startsWith("support")) ) || (!(input.contains("0")) && !(input.contains("1")) && !(input.contains("2")))){
           works = false;
           TextBox(8,3,34,4,reprompt);
         }
-        if (((enemies.size() < 3) && input.contains("2") && ((input.startsWith("attack ")) || (input.startsWith("a ")) ||(input.startsWith("sp ")) ||(input.startsWith("special "))  )) || ((enemies.size() < 2) && input.contains("1") && ((input.startsWith("attack ")) || (input.startsWith("a ")) || input.startsWith("special ") || input.startsWith("sp ")))){
+        if (((enemies.size() < 3) && input.contains("2") && ((input.startsWith("attack")) || (input.startsWith("a")) ||(input.startsWith("sp")) ||(input.startsWith("special"))  )) || ((enemies.size() < 2) && input.contains("1") && ((input.startsWith("attack")) || (input.startsWith("a")) || input.startsWith("special") || input.startsWith("sp")))){
           works = false;
           TextBox(8,3,34,2,reprompt);
         }
@@ -335,29 +335,31 @@ public class Game{
         }else if(works && !end){
           //This is after the player's turn, and allows the user to see the enemy turn
           //Decide where to draw the following prompt:
-          String prompt = "press enter to see next monster's turn";
-          TextBox(22,3,34,10,prompt);
+          String prompt = "Press enter to see next opponent's turn";
+          TextBox(20,3,34,10,prompt);
           partyTurn = false;
           whichOpponent = 0;
         }
         //done with one party member
 
       }
-      for (int i == enemies.size();i>0;i--){
-        if enimies(i).getHP==0{
-          enimies.remove(i);
+      for (int i = enemies.size()-1;i>0;i--){
+        if (enemies.get(i).getHP()>=0){
+          enemies.remove(i);
         }
       }
-      else if(end){
+      if(end){
         TextBox(22,3,34,10,"Game over. Good party wins.");
         quit();
       }
-      for(int i = 0; i < party.size(); i++){
+      for(int i = party.size()-1; i >0; i--){
         if(party.get(i).getHP() < 0){
-          endParty = true;
+          party.remove(i);
+          System.out.print(party);
         }
       }
-       if (!(endParty) && !(partyTurn)){
+      if (party.size()==0)endParty = true;
+      if (!(endParty) && !(partyTurn)){
         //not the party turn!
 
 
