@@ -248,7 +248,7 @@ public class Game{
 
       //display event based on last turn's input
 
-      if (enemies.size() == 0) end = true;
+
       if(partyTurn && !end){
 
 
@@ -348,9 +348,11 @@ public class Game{
           enemies.remove(i);
         }
       }
+      if (enemies.size() == 0) end = true;
       if(end){
-        TextBox(22,3,34,10,"Game over. Good party wins.");
-        quit();
+        Text.reset();
+        TextBox(23,3,34,10,"Game over. Good party wins.");
+        System.exit(0);
       }
 
       if (!(endParty) && !(partyTurn)){
@@ -439,7 +441,8 @@ public class Game{
         if (party.size()==0)endParty = true;
       }
       if(endParty){
-        TextBox(22,3,34,10,"Game over. Enemies win.");
+        Text.reset();
+        TextBox(23,3,34,10,"Game over. Enemies win.");
         quit();
       }
 
