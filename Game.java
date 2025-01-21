@@ -87,14 +87,39 @@ public class Game{
     //feel free to overload this method to allow specific names/stats.
     public static Adventurer createRandomAdventurer(){
       int find = (int)(Math.random()*3);
+      int find2 = (int)(Math.random()*3);
       if(find == 0){
-        return new QB("Allen");
+        if (find2 == 0){
+          return new QB();
+        }
+        else if (find2 == 1){
+          return new QB("Burrow");
+        }
+        else{
+          return new QB("Lock");
+        }
       }
       else if(find == 1){
-        return new RB("Cook");
+        if (find2 == 0){
+          return new RB();
+        }
+        else if (find2 == 1){
+          return new RB("Barkley");
+        }
+        else{
+          return new RB("Henry");
+        }
       }
       else{
-      return new DL("Dawkins");
+        if (find2 == 0){
+          return new DL();
+        }
+        else if (find2 == 1){
+          return new DL("Heyward");
+        }
+        else{
+          return new DL("Hendrickson");
+        }
     }
     }
 
