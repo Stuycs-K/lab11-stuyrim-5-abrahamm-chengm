@@ -33,6 +33,14 @@ Make a clear list of features that work/dont work
 
 :white_check_mark: Reprompts when invalid input.
 
+:white_check_mark: Goes to next players turn if not end of party turn yet.
+
+:white_check_mark: Goes to next enemies turn if not end of enemy turn yet.
+
+:white_check_mark: All classes are special in abilites.
+
+ballot_box_with_check: RB class has working stat boost
+
 :white_check_mark: Game is able to randomly input enemy party move.
 
 :white_check_mark: Game able to end when no HP is left on either side.

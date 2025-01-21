@@ -48,7 +48,7 @@ public class RB extends Adventurer{
         other.applyDamage(damage * 0.20);
       }
       restoreSpecial(10);
-      return this + " rushed "+ other + " and dealt "+ damage +
+      return this + " rushed "+ other + " and dealt "+ damage * 1.2 +
       " points of damage. They then get more warmed up and gain speed.";
     }
 
@@ -65,7 +65,7 @@ public class RB extends Adventurer{
         }
         setHP(getHP()+15);
         return this + "used their speed to truck through the enemy." +
-        " This hurt "+other+" dealing "+ damage +" points of damage." +"Also " +
+        " This hurt "+other+" dealing "+ damage * 1.2 +" points of damage." +"Also " +
         "get a health increase of 5. However, self lost 25 speed.";
       }else{
         return "Not enough speed to truck. Instead "+attack(other);
@@ -81,6 +81,7 @@ public class RB extends Adventurer{
     public String support(){
       if(getSpecial() >= 25){
       attackIncrease = true;
+      setSpecial(getSpecial() - 25);
       return this+" drinks gatorade to increase attack power.";
       }
       else{
