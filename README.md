@@ -22,7 +22,7 @@ Make a clear list of features that work/dont work
 - Initial Arm Power: **0**
 - Max Arm Power: **35**
 - Initial HP: **60 HP**
-- HP: **NO MAX**
+- HP: **60 MAX**
 - Attack: **Pass**: Deals 10 to 15 damage to enemy and also increases self Arm Power by 5
 - Support: **Take a Knee**: ***lose 10 Arm Power*** but heals self for 10 HP
 - Support (Ally): **Protect the QB**: Heal the reciever for 10 HP; Self loses 10 Arm Power
@@ -32,7 +32,7 @@ Make a clear list of features that work/dont work
 - Initial Speed: **0**
 - Max Speed: **60**
 - Initial HP: **80 HP**
-- HP: **NO MAX**
+- HP: **80 MAX**
 - Attack: **Rush**: Deals 5 to 10 damage to enemy and increases self speed by 10
 - Support: **Gatorade sip**: ***give self 10% damage increase if below 40 HP***, ***otherwise only <ins>5%</ins> damage increase*** ; ***Need 25 speed to use*** ; If used remove 25 Speed from self; Damage boost does not stack
 - Support(ally): **Cannot support ally so uses regular support instead**.
@@ -42,7 +42,7 @@ Make a clear list of features that work/dont work
 - Initial Strength: **0**
 - Max Strength: **60**
 - Initial HP: **100 HP**
-- HP: **NO HP MAX**
+- HP: **100 HP MAX**
 - Attack: **Tackle**: Deals 10 damage to enemy and increases self strength by 10;
 - Support: **Sideline Rest**: Self converts <ins>half</ins> of current strength to HP, adds that number to the HP and then reset self strength to **zero**
 - Support (Ally): **Protect**: Heal the protected for 20 HP and give him 10 super charge; Self loses 30 Strength. If not enough strength, self support instead.
@@ -52,7 +52,7 @@ Make a clear list of features that work/dont work
 - Initial Ref Blindness: **0**
 - Max Ref Blindness: **76**
 - Initial HP: **150 HP**
-- HP: **NO MAX**
+- HP: **150 HP MAX**
 - Attack: **Flopping**: Deals 15 damage to enemy and also increases ref blindess by 4
 - Support: **Holding Call**: ***lose 20 Ref Blindness*** but heals self for 30 HP
 - Support (Ally): None

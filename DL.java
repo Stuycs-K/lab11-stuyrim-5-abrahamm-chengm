@@ -79,7 +79,13 @@ public class DL extends Adventurer{
     /*Restores half of strength to health to self.*/
     public String support(){
       int hp = strength/2;
+      if(getHP() < getmaxHP() - hp){
       setHP(getHP()+hp);
-      return this+" rests to restores " +hp+" HP.";
+      return this+" rests to restore " +hp+" HP.";
+      }
+      else{
+        setHP(getmaxHP());
+        return this+ "rests to get back to max hp";
+      }
     }
   }

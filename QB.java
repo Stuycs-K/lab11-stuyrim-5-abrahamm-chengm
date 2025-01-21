@@ -47,8 +47,8 @@ public class QB extends Adventurer{
     " points of damage. They then gain 5 strength.";
   }
 
-  /*Deal 3-12 damage to opponent, only if caffeine is high enough.
-  *Reduces caffeine by 8.
+  /*Deal30 damage to opponent, only if arm power is high enough.
+  *Reduces arm power by 8.
   */
   public String specialAttack(Adventurer other){
     if(getSpecial() >= 20){
@@ -64,17 +64,26 @@ public class QB extends Adventurer{
   }
   /*Restores 5 special to other*/
   public String support(Adventurer other){
+    if(other.getHP() < other.getmaxHP() - 10){
     other.setHP(other.getHP()+10);
     return "Gives a pass to "+other+" and restores 10 HP.";
+    }
+    else{
+      other.setHP((other.getmaxHP()));
+      return "Gives a pass to " + other + " and restores back to max.";
+    }
   }
 
-  /*Restores 6 special and 1 hp to self.*/
+  /*Restores 10 hp to self.*/
   public String support(){
     int hp = 10;
     if(getSpecial() >= 10){
       setSpecial(getSpecial()-10);
+      if (getHP() < getmaxHP()- 10){
       setHP(getHP()+hp);
-    return this+" takes a kneww to restore "+hp+" HP.";
+      }
+      else setHP(getmaxHP());
+    return this+" takes a knee to restore "+hp+" HP.";
   }
   else{
     return "Not enough power to take a knee at this current time.";

@@ -52,8 +52,8 @@ public class RB extends Adventurer{
       " points of damage. They then get more warmed up and gain speed.";
     }
 
-    /*Deal 15 damage to opponent, only if caffeine is high enough.
-    *Reduces caffeine by 25.
+    /*Deal 15 damage to opponent, only if speed is high enough.
+    *Reduces speed by 25.
     */
     public String specialAttack(Adventurer other){
       if(getSpecial() >= 25){

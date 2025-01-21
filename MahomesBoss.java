@@ -57,7 +57,12 @@ public class MahomesBoss extends Adventurer{
         setSpecial(getSpecial()-20);
         int damage = 20;
         other.applyDamage(damage);
+        if(getHP() < getmaxHP() - 20){
         setHP(getHP()+20);
+        }
+        else{
+            setHP(getmaxHP());
+        }
         return this + "used their riggedness to get unfair calls on the enemy." +
         " This hurt "+other+" dealing "+ damage +" points of damage." +"Also " +
         "get a health increase of 5. However, self lost 25 refBlindness.";
@@ -74,7 +79,10 @@ public class MahomesBoss extends Adventurer{
     /*Gain health if enough blidness.*/
     public String support(){
       if(getSpecial() >= 20){
+        if (getHP() < getmaxHP() - 30){
         setHP(getHP() + 30);
+        }
+        else setHP(getmaxHP());
       return this+" gets unfair holding call to increase health.";
       }
       else{
