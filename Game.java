@@ -177,9 +177,14 @@ public class Game{
     //start with 1 boss and modify the code to allow 2-3 adventurers later.
     ArrayList<Adventurer>enemies = new ArrayList<Adventurer>();
     int enmnum = (int)(Math.random()*3);
+    if (enmnum == 1){
+      enemies.add(new MahomesBoss());
+    }
+    else{
     for (int i22=0;i22<enmnum+1;i22++){
       enemies.add(createRandomAdventurer());
     }
+  }
     //Adventurers you control:
     //Make an ArrayList of Adventurers and add 2-4 Adventurers to it.
     ArrayList<Adventurer> party = new ArrayList<>();
