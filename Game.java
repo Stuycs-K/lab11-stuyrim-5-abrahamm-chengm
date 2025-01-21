@@ -148,7 +148,7 @@ public class Game{
   }
 
   public static String userInput(Scanner in){
-      Text.go(10,3);
+      Text.go(22,3);
 
       Text.showCursor();
 
@@ -230,25 +230,25 @@ public class Game{
         if(input.startsWith("attack") || input.startsWith("a")){
           works = true;
           if(input.contains("0")){
-            TextBox(11,3,34,10,party.get(whichPlayer).attack(enemies.get(0)));
+            TextBox(14,3,34,10,party.get(whichPlayer).attack(enemies.get(0)));
           }
           if(input.contains("1") && enemies.size() >1 ){
-            TextBox(11,3,34,10,party.get(whichPlayer).attack(enemies.get(1)));
+            TextBox(14,3,34,10,party.get(whichPlayer).attack(enemies.get(1)));
           }
           if(input.contains("2") && enemies.size()  > 2){
-            TextBox(11,3,34,10,party.get(whichPlayer).attack(enemies.get(2)));
+            TextBox(14,3,34,10,party.get(whichPlayer).attack(enemies.get(2)));
           }
         }
         else if(input.startsWith("special") || input.startsWith("sp")){
           works = true;
           if(input.contains("0")){
-            TextBox(11,3,34,10,party.get(whichPlayer).specialAttack(enemies.get(0)));
+            TextBox(14,3,34,10,party.get(whichPlayer).specialAttack(enemies.get(0)));
           }
           if(input.contains("1") && enemies.size() >1 ){
-            TextBox(11,3,34,10,party.get(whichPlayer).specialAttack(enemies.get(1)));
+            TextBox(14,3,34,10,party.get(whichPlayer).specialAttack(enemies.get(1)));
           }
           if(input.contains("2") && enemies.size()  > 2){
-            TextBox(11,3,34,10,party.get(whichPlayer).specialAttack(enemies.get(2)));
+            TextBox(14,3,34,10,party.get(whichPlayer).specialAttack(enemies.get(2)));
           }
         }
         else if(input.startsWith("su") || input.startsWith("support")){
@@ -259,42 +259,46 @@ public class Game{
           works = true;
           if(input.contains("0")){
             if (whichPlayer == 0){
-              TextBox(11,3,34,10,party.get(whichPlayer).support());
+              TextBox(14,3,34,10,party.get(whichPlayer).support());
             }
             else{
-              TextBox(11,3,34,10,party.get(whichPlayer).support(party.get(0)));
+              TextBox(14,3,34,10,party.get(whichPlayer).support(party.get(0)));
             }
           }
           if(input.contains("1") && party.size() >1 ){
             if (whichPlayer == 1){
-              TextBox(11,3,34,10,party.get(whichPlayer).support());
+              TextBox(14,3,34,10,party.get(whichPlayer).support());
             }
             else{
-              TextBox(11,3,34,10,party.get(whichPlayer).support(party.get(1)));
+              TextBox(14,3,34,10,party.get(whichPlayer).support(party.get(1)));
             }
           }
           if(input.contains("2") && party.size()  > 2){
             if (whichPlayer == 2){
-              TextBox(11,3,34,10,party.get(whichPlayer).support());
+              TextBox(14,3,34,10,party.get(whichPlayer).support());
             }
             else{
-              TextBox(11,3,34,10,party.get(whichPlayer).support(party.get(2)));
+              TextBox(14,3,34,10,party.get(whichPlayer).support(party.get(2)));
             }
           }
           if(input.contains("3") && party.size()  > 3){
             if (whichPlayer == 3){
-              TextBox(11,3,34,10,party.get(whichPlayer).support());
+              TextBox(14,3,34,10,party.get(whichPlayer).support());
             }
             else{
-              TextBox(11,3,34,10,party.get(whichPlayer).support(party.get(3)));
+              TextBox(14,3,34,10,party.get(whichPlayer).support(party.get(3)));
             }
           }
         }
         String reprompt = "Re-enter command for "+party.get(whichPlayer)+": attack/special/quit";
-        if (!(input.startsWith("a ")) && !(input.startsWith("attack ")) && !(input.startsWith("sp ")) && !(input.startsWith("special ")) && !(input.startsWith("su ")) && !(input.startsWith("support ")) && !(input.contains(" 0")) && !(input.contains(" 1")) && !(input.contains(" 2"))){
+        if ((!(input.startsWith("a ")) && !(input.startsWith("attack ")) && !(input.startsWith("sp ")) && !(input.startsWith("special ")) && !(input.startsWith("su ")) && !(input.startsWith("support ")) ) || (!(input.contains("0")) && !(input.contains("1")) && !(input.contains("2")))){
+          works = false;
           TextBox(8,3,34,2,reprompt);
         }
-          
+        if ((enemies.size() < 3) && input.contains("2") || (enemies.size() < 2) && input.contains("1")){
+          works = false;
+          TextBox(8,3,34,2,reprompt);
+        }
         if(whichPlayer < party.size() -1 && works && !end){
           //This is a player turn.
           //Decide where to draw the following prompt:
