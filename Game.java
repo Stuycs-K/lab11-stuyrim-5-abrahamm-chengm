@@ -112,7 +112,7 @@ public class Game{
         Text.go(startRow,3+is*25);
         System.out.print(party.get(is).getName());
         Text.go(startRow+1,3+is*25);
-        System.out.print("HP: "+party.get(is).getHP());
+        System.out.print("HP: "+colorByPercent(party.get(is).getHP(), party.get(is).getmaxHP()));
         Text.go(startRow+2,3+is*25);
         System.out.print(party.get(is).getSpecialName()+": "+party.get(is).getSpecial());
       }
@@ -126,6 +126,12 @@ public class Game{
     // under 25% : red
     // under 75% : yellow
     // otherwise : white
+    if ( maxHP / 4.0 >hp){
+      output = "\u001b[" + Text.RED + "m" + output + "\u001b[0m";
+    }
+    else if((maxHP * 3 / 4.0 ) > hp){
+      output = "\u001b[" + Text.YELLOW + "m" + output + "\u001b[0m";
+    }
     return output;
   }
 
