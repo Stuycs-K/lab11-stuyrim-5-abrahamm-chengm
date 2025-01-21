@@ -7,6 +7,8 @@ Make a clear list of features that work/dont work
 
 :white_check_mark: QB can attack and special attack toward specified targets.
 
+:white_check_mark: TE can attack and special attack toward specified targets.
+
 :white_check_mark: RB can attack and special attack toward specified targets.
 
 :white_check_mark: DL can attack and special attack toward specified targets.
@@ -14,6 +16,8 @@ Make a clear list of features that work/dont work
 :white_check_mark: Boss can attack and special attack toward random target.
 
 :white_check_mark: QB can support self and support ally.
+
+:white_check_mark: TE can support self and support ally.
 
 :white_check_mark: Boss can support self.
 
