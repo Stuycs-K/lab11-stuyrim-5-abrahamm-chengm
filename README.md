@@ -39,7 +39,7 @@ Make a clear list of features that work/dont work
 
 :white_check_mark: All classes are special in abilites.
 
-ballot_box_with_check: RB class has working stat boost
+:ballot_box_with_check: RB class has working stat boost
 
 :white_check_mark: Game is able to randomly input enemy party move.
 
@@ -57,7 +57,7 @@ ballot_box_with_check: RB class has working stat boost
 - HP: **60 MAX**
 - Attack: **Pass**: Deals 10 to 15 damage to enemy and also increases self Arm Power by 5
 - Support: **Take a Knee**: ***lose 10 Arm Power*** but heals self for 10 HP
-- Support (Ally): **Protect the QB**: **Self loses 10 Arm Power** Heal the reciever for 10 HP; 
+- Support (Ally): **Protect the QB**: **Self loses 10 Arm Power** Heal the reciever for 10 HP;
 - Special Attack: **Hail Mary** ***(Requires 20 Arm Power)***: Deals 30 damage to enemy but self loses 20 Arm Power
 - Special Resource: <ins>Arm Power</ins>
 ### <ins>Running Back</ins>
