@@ -22,7 +22,6 @@ Make a clear list of features that work/dont work
 :white_check_mark: Game is able to randomly input enemy party move.
 :white_check_mark: Game able to end when no HP is left on either side.
 :ballot_box_with_check: Winner specified at game end.
-:beetle: This is a bug that affects the game.
 
 
 ## Adventurer Subclasses
