@@ -46,7 +46,7 @@ public class DL extends Adventurer{
       other.applyDamage(damage);
       restoreSpecial(10);
       return this + " tackled "+ other + " and dealt "+ damage +
-      " points of damage. They then gain strength .";
+      " points of damage. They then gain strength.";
     }
 
     /*Deal 30 damage to opponent, only if strength is high enough.
@@ -80,6 +80,6 @@ public class DL extends Adventurer{
     public String support(){
       int hp = strength/2;
       setHP(getHP()+hp);
-      return this+" rests to restores " +hp+" HP";
+      return this+" rests to restores " +hp+" HP.";
     }
   }

@@ -66,7 +66,7 @@ public class RB extends Adventurer{
         setHP(getHP()+15);
         return this + "used their speed to truck through the enemy." +
         " This hurt "+other+" dealing "+ damage +" points of damage." +"Also " +
-        "get a health increase of 5. However, self lost 25 speed";
+        "get a health increase of 5. However, self lost 25 speed.";
       }else{
         return "Not enough speed to truck. Instead "+attack(other);
       }
@@ -81,7 +81,7 @@ public class RB extends Adventurer{
     public String support(){
       if(getSpecial() >= 25){
       attackIncrease = true;
-      return this+" drinks gatorade to increase attack power ";
+      return this+" drinks gatorade to increase attack power.";
       }
       else{
         return this + "does nothing.";

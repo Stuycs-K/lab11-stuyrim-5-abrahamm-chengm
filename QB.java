@@ -65,7 +65,7 @@ public class QB extends Adventurer{
   /*Restores 5 special to other*/
   public String support(Adventurer other){
     other.setHP(getHP()+10);
-    return "Gives a pass to "+other+" and restores 10 HP";
+    return "Gives a pass to "+other+" and restores 10 HP.";
   }
 
   /*Restores 6 special and 1 hp to self.*/
@@ -74,10 +74,10 @@ public class QB extends Adventurer{
     if(getSpecial() >= 10){
       setSpecial(getSpecial()-10);
       setHP(getHP()+hp);
-    return this+" takes a kneww to restore "+hp+" HP";
+    return this+" takes a kneww to restore "+hp+" HP.";
   }
   else{
-    return "not enough power to take a knee at this current time.";
+    return "Not enough power to take a knee at this current time.";
   }
 }
 }
