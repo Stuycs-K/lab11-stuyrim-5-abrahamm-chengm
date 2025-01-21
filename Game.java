@@ -93,10 +93,10 @@ public class Game{
           return new QB();
         }
         else if (find2 == 1){
-          return new QB("Burrow");
+          return new QB("Burrow (QB)");
         }
         else{
-          return new QB("Lock");
+          return new QB("Lock (QB)");
         }
       }
       else if(find == 1){
@@ -104,10 +104,10 @@ public class Game{
           return new RB();
         }
         else if (find2 == 1){
-          return new RB("Barkley");
+          return new RB("Barkley (RB)");
         }
         else{
-          return new RB("Henry");
+          return new RB("Henry (RB)");
         }
       }
       else{
@@ -115,10 +115,10 @@ public class Game{
           return new DL();
         }
         else if (find2 == 1){
-          return new DL("Heyward");
+          return new DL("Heyward (DL)");
         }
         else{
-          return new DL("Hendrickson");
+          return new DL("Hendrickson (DL)");
         }
     }
     }
@@ -247,15 +247,15 @@ public class Game{
       //TextBox(11,2,20,78,"input: "+input+" partyTurn:"+partyTurn+ " whichPlayer="+whichPlayer+ " whichOpp="+whichOpponent );
 
       //display event based on last turn's input
-      
+
       for ( int i = 0; i < enemies.size(); i ++){
         if (enemies.get(i).getHP() <= 0){
           end = true;
         }
       }
       if(partyTurn && !end){
-        
-        
+
+
         boolean works = false;
         //Process user input for the last Adventurer:
         if(input.startsWith("attack") || input.startsWith("a")){
@@ -286,7 +286,7 @@ public class Game{
           //"support 0" or "su 0" or "su 2" etc.
           //assume the value that follows su  is an integer.
           /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-          
+
           works = true;
           if(input.contains("0")){
             if (whichPlayer == 0){
@@ -345,7 +345,7 @@ public class Game{
           whichOpponent = 0;
         }
         //done with one party member
-        
+
       }
       else if(end){
         TextBox(22,3,34,10,"Game over");
@@ -358,7 +358,7 @@ public class Game{
       }
        if (!(endParty) && !(partyTurn)){
         //not the party turn!
-        
+
 
         //enemy attacks a randomly chosen person with a randomly chosen attack.z`
         //Enemy action choices go here!
@@ -435,7 +435,7 @@ public class Game{
           TextBox(20,3,34,10,prompt);
         }
       }
-        
+
 
       //end of one enemy.
       //display the updated screen after input has been processed.
