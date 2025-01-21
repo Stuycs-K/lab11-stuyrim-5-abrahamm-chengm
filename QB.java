@@ -64,7 +64,7 @@ public class QB extends Adventurer{
   }
   /*Restores 5 special to other*/
   public String support(Adventurer other){
-    other.setHP(getHP()+10);
+    other.setHP(other.getHP()+10);
     return "Gives a pass to "+other+" and restores 10 HP.";
   }
 
