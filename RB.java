@@ -25,7 +25,7 @@ public class RB extends Adventurer{
     }
     /*The next 8 methods are all required because they are abstract:*/
     public String getSpecialName(){
-      return "speed";
+      return "Speed";
     }
 
     public int getSpecial(){
@@ -54,8 +54,8 @@ public class RB extends Adventurer{
         return this + " rushed "+ other + " and dealt "+ damage +
       " points of damage. They then get more warmed up and gain speed.";
       }
-      
-      
+
+
     }
 
     /*Deal 15 damage to opponent, only if speed is high enough.

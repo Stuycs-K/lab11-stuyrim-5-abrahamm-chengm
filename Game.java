@@ -248,11 +248,7 @@ public class Game{
 
       //display event based on last turn's input
 
-      for ( int i = 0; i < enemies.size(); i ++){
-        if (enemies.get(i).getHP() <= 0){
-          end = true;
-        }
-      }
+      if (enemies.size() == 0) end = true;
       if(partyTurn && !end){
 
 
@@ -346,6 +342,11 @@ public class Game{
         }
         //done with one party member
 
+      }
+      for (int i == enemies.size();i>0;i--){
+        if enimies(i).getHP==0{
+          enimies.remove(i);
+        }
       }
       else if(end){
         TextBox(22,3,34,10,"Game over. Good party wins.");
