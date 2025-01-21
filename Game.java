@@ -236,8 +236,8 @@ public class Game{
     //Main loop
 
     //display this prompt at the start of the game.
-    String preprompt = "Enter command for "+party.get(whichPlayer)+": attack/special/quit";
-    TextBox(8,3,34,2,preprompt);
+    String preprompt = "Enter command for "+party.get(whichPlayer)+": attack(a)+target / special(sp)+target / support(su)+taregt / quit(q)";
+    TextBox(8,3,34,4,preprompt);
     boolean end = false;
     boolean endParty = false;
     while((! (input.equalsIgnoreCase("q") || input.equalsIgnoreCase("quit"))) && !end && !endParty){
@@ -321,10 +321,10 @@ public class Game{
             }
           }
         }
-        String reprompt = "Re-enter command for "+party.get(whichPlayer)+": attack/special/quit";
+        String reprompt = "Re-enter command for "+party.get(whichPlayer)+": attack(a)+target / special(sp)+target / support(su)+taregt / quit(q)";
         if ((!(input.startsWith("a ")) && !(input.startsWith("attack ")) && !(input.startsWith("sp ")) && !(input.startsWith("special ")) && !(input.startsWith("su ")) && !(input.startsWith("support ")) ) || (!(input.contains("0")) && !(input.contains("1")) && !(input.contains("2")))){
           works = false;
-          TextBox(8,3,34,2,reprompt);
+          TextBox(8,3,34,4,reprompt);
         }
         if (((enemies.size() < 3) && input.contains("2") && ((input.startsWith("attack ")) || (input.startsWith("a ")) ||(input.startsWith("sp ")) ||(input.startsWith("special "))  )) || ((enemies.size() < 2) && input.contains("1") && ((input.startsWith("attack ")) || (input.startsWith("a ")) || input.startsWith("special ") || input.startsWith("sp ")))){
           works = false;
