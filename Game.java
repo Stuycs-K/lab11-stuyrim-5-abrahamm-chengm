@@ -114,7 +114,7 @@ public class Game{
         Text.go(startRow+1,3+is*25);
         System.out.print("HP: "+colorByPercent(party.get(is).getHP(), party.get(is).getmaxHP()));
         Text.go(startRow+2,3+is*25);
-        System.out.print(party.get(is).getSpecialName()+": "+party.get(is).getSpecial());
+        System.out.print(party.get(is).getSpecialName()+": "+party.get(is).getSpecial() + "/" + party.get(is).getSpecialMax());
       }
     }
 
