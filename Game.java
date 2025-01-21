@@ -176,12 +176,12 @@ public class Game{
     //If only 1 enemy is added it should be the boss class.
     //start with 1 boss and modify the code to allow 2-3 adventurers later.
     ArrayList<Adventurer>enemies = new ArrayList<Adventurer>();
-    int enmnum = (int)(Math.random()*3);
+    int enmnum = (int)(Math.random()*3 + 1);
     if (enmnum == 1){
       enemies.add(new MahomesBoss());
     }
     else{
-    for (int i22=0;i22<enmnum+1;i22++){
+    for (int i22=1;i22<enmnum+ 1;i22++){
       enemies.add(createRandomAdventurer());
     }
   }

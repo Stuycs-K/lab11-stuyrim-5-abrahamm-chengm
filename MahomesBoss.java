@@ -78,7 +78,7 @@ public class MahomesBoss extends Adventurer{
       return this+" gets unfair holding call to increase health.";
       }
       else{
-        return this + "does nothing.";
+        return this + " does nothing.";
       }
     }
   }
