@@ -18,7 +18,7 @@ public class QB extends Adventurer{
   }
 
   public QB(){
-    this("Allen");
+    this("Allen (QB)");
   }
 
   /*The next 8 methods are all required because they are abstract:*/

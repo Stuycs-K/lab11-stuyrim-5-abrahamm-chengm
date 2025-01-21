@@ -21,7 +21,7 @@ public class RB extends Adventurer{
     }
 
     public RB(){
-      this("Cook");
+      this("Cook (RB)");
     }
     /*The next 8 methods are all required because they are abstract:*/
     public String getSpecialName(){

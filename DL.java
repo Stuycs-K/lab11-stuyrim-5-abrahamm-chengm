@@ -20,7 +20,7 @@ public class DL extends Adventurer{
     }
 
     public DL(){
-      this("Dawkins");
+      this("Dawkins (DL)");
     }
 
     /*The next 8 methods are all required because they are abstract:*/
