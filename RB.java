@@ -44,12 +44,18 @@ public class RB extends Adventurer{
     public String attack(Adventurer other){
       int damage = (int)(Math.random()*6)+5;
       other.applyDamage(damage);
+      restoreSpecial(10);
       if (attackIncrease){
         other.applyDamage(damage * 0.20);
-      }
-      restoreSpecial(10);
-      return this + " rushed "+ other + " and dealt "+ (int)(damage * 1.2) +
+        return this + " rushed "+ other + " and dealt "+ (int)(damage * 1.2) +
       " points of damage. They then get more warmed up and gain speed.";
+      }
+      else{
+        return this + " rushed "+ other + " and dealt "+ damage +
+      " points of damage. They then get more warmed up and gain speed.";
+      }
+      
+      
     }
 
     /*Deal 15 damage to opponent, only if speed is high enough.
@@ -59,14 +65,19 @@ public class RB extends Adventurer{
       if(getSpecial() >= 25){
         setSpecial(getSpecial()-25);
         int damage = 15;
+        setHP(getHP()+15);
         other.applyDamage(damage);
         if (attackIncrease){
             other.applyDamage(damage*0.2);
-        }
-        setHP(getHP()+15);
-        return this + "used their speed to truck through the enemy." +
+            return this + "used their speed to truck through the enemy." +
         " This hurt "+other+" dealing "+ (int)(damage * 1.2) +" points of damage." +"Also " +
         "get a health increase of 5. However, self lost 25 speed.";
+        }
+        else{
+          return this + "used their speed to truck through the enemy." +
+        " This hurt "+other+" dealing "+ damage +" points of damage." +"Also " +
+        "get a health increase of 5. However, self lost 25 speed.";
+        }
       }else{
         return "Not enough speed to truck. Instead "+attack(other);
       }
