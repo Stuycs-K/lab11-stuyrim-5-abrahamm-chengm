@@ -14,7 +14,7 @@ public class QB extends Adventurer{
   }
 
   public QB(String name){
-    this(name,24);
+    this(name,60);
   }
 
   public QB(){
