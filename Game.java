@@ -324,7 +324,7 @@ public class Game{
         }
         if (((enemies.size() < 3) && input.contains("2") && ((input.startsWith("attack")) || (input.startsWith("a")) ||(input.startsWith("sp")) ||(input.startsWith("special"))  )) || ((enemies.size() < 2) && input.contains("1") && ((input.startsWith("attack")) || (input.startsWith("a")) || input.startsWith("special") || input.startsWith("sp")))){
           works = false;
-          TextBox(8,3,34,2,reprompt);
+          TextBox(8,3,34,4,reprompt);
         }
         if(whichPlayer < party.size() -1 && works && !end){
           //This is a player turn.
@@ -343,8 +343,8 @@ public class Game{
         //done with one party member
 
       }
-      for (int i = enemies.size()-1;i>0;i--){
-        if (enemies.get(i).getHP()>=0){
+      for (int i = enemies.size()-1;i>=0;i--){
+        if (enemies.get(i).getHP()<=0){
           enemies.remove(i);
         }
       }
@@ -352,13 +352,7 @@ public class Game{
         TextBox(22,3,34,10,"Game over. Good party wins.");
         quit();
       }
-      for(int i = party.size()-1; i >0; i--){
-        if(party.get(i).getHP() < 0){
-          party.remove(i);
-          System.out.print(party);
-        }
-      }
-      if (party.size()==0)endParty = true;
+
       if (!(endParty) && !(partyTurn)){
         //not the party turn!
 
@@ -437,8 +431,14 @@ public class Game{
           String prompt = "Enter command for "+party.get(whichPlayer)+": attack/special/quit";
           TextBox(20,3,34,10,prompt);
         }
+        for(int i = party.size()-1; i>=0; i--){
+          if(party.get(i).getHP() <= 0){
+            party.remove(i);
+          }
+        }
+        if (party.size()==0)endParty = true;
       }
-      else if(endParty){
+      if(endParty){
         TextBox(22,3,34,10,"Game over. Enemies win.");
         quit();
       }
