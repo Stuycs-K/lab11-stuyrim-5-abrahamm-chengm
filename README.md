@@ -48,3 +48,13 @@ Make a clear list of features that work/dont work
 - Support (Ally): **Protect**: Heal the protected for 20 HP and give him 10 super charge; Self loses 30 Strength. If not enough strength, self support instead.
 - Special Attack:  **Sack** ***(Requires 25 Strength)***: Deals 30 damage to enemy but self loses 25 Strength
 - Special Resource: <ins>Strength</ins>
+### <ins>Mahomes the Boss</ins>
+- Initial Ref Blindness: **0**
+- Max Ref Blindness: **76**
+- Initial HP: **150 HP**
+- HP: **NO MAX**
+- Attack: **Flopping**: Deals 15 damage to enemy and also increases ref blindess by 4
+- Support: **Holding Call**: ***lose 20 Ref Blindness*** but heals self for 30 HP
+- Support (Ally): None
+- Special Attack: **Unneccesary Roughness** ***(Requires 20 Ref Blindness)***: Deals 20 damage to enemy and gain 20 health but self loses 20 Ref Blindness
+- Special Resource: <ins>Ref blindness</ins>
