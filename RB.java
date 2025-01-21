@@ -45,7 +45,7 @@ public class RB extends Adventurer{
       int damage = (int)(Math.random()*6)+5;
       other.applyDamage(damage);
       if (attackIncrease){
-        other.applyDamage(damage * 0.1);
+        other.applyDamage(damage * 0.20);
       }
       restoreSpecial(10);
       return this + " rushed "+ other + " and dealt "+ damage +
@@ -61,7 +61,7 @@ public class RB extends Adventurer{
         int damage = 15;
         other.applyDamage(damage);
         if (attackIncrease){
-            other.applyDamage(damage*0.1);
+            other.applyDamage(damage*0.2);
         }
         setHP(getHP()+15);
         return this + "used their speed to truck through the enemy." +

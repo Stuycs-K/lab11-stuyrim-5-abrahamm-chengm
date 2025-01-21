@@ -34,7 +34,7 @@ Make a clear list of features that work/dont work
 - Initial HP: **80 HP**
 - HP: **80 MAX**
 - Attack: **Rush**: Deals 5 to 10 damage to enemy and increases self speed by 10
-- Support: **Gatorade sip**: ***give self 10% damage increase if below 40 HP***, ***otherwise only <ins>5%</ins> damage increase*** ; ***Need 25 speed to use*** ; If used remove 25 Speed from self; Damage boost does not stack
+- Support: **Gatorade sip**: ***give self 20% damage *** ; ***Need 25 speed to use*** ; If used remove 25 Speed from self; Damage boost does not stack
 - Support(ally): **Cannot support ally so uses regular support instead**.
 - Special Attack: **Truck** ***(Requires 25 Speed)***: Deals 15 damage to enemy but self lose 25 Speed; If not enough speed, attack instead; **Also gains 15 health.**
 - Special Resource: <ins>Speed</ins>
