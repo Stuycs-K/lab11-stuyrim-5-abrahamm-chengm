@@ -301,7 +301,7 @@ public class Game{
           works = false;
           TextBox(8,3,34,2,reprompt);
         }
-        if ((enemies.size() < 3) && input.contains("2") || (enemies.size() < 2) && input.contains("1")){
+        if (((enemies.size() < 3) && input.contains("2") && ((input.startsWith("attack ")) || (input.startsWith("a ")) ||(input.startsWith("sp ")) ||(input.startsWith("special "))  )) || ((enemies.size() < 2) && input.contains("1") && ((input.startsWith("attack ")) || (input.startsWith("a ")) || input.startsWith("special ") || input.startsWith("sp ")))){
           works = false;
           TextBox(8,3,34,2,reprompt);
         }

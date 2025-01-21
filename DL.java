@@ -73,7 +73,7 @@ public class DL extends Adventurer{
       + other.restoreSpecial(10)+" "+other.getSpecialName();
     }
     else{
-        return "Not enough strength to support ally. Instead" + support();
+        return "Not enough strength to support ally. Instead " + support();
     }
 }
     /*Restores half of strength to health to self.*/
@@ -85,7 +85,7 @@ public class DL extends Adventurer{
       }
       else{
         setHP(getmaxHP());
-        return this+ "rests to get back to max hp";
+        return this+ " rests to get back to max hp";
       }
     }
   }
